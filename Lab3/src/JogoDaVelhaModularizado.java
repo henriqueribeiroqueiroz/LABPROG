@@ -1,4 +1,6 @@
 import java.util.Scanner;
+/* Aluno 1: <José Henrique Ribeiro de Queiroz> */
+
 
 public class JogoDaVelhaModularizado {
 	public static void main(String args[]) {
@@ -8,7 +10,6 @@ public class JogoDaVelhaModularizado {
 
 		iniciar(i, j, tabuleiro, jogada);
 
-		
 	}
 
 	public static void alimentarTabuleiro(int i, int j, char tabuleiro[][]) {
@@ -55,21 +56,21 @@ public class JogoDaVelhaModularizado {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("\nDeseja iniciar uma nova partida? [S/N]");
 		String resp = sc.nextLine();
-		if (resp.equals("S")){
-			iniciar(0, 0, new char[3][3], 0); 
+		if (resp.equals("S") || resp.equals("s") ) {
+			iniciar(0, 0, new char[3][3], 0);
 		}
-		
+
 	}
 
-	public static void iniciar(int i, int j, char tabuleiro [][], int jogada) {
+	public static void iniciar(int i, int j, char tabuleiro[][], int jogada) {
 		Scanner sc = new Scanner(System.in);
 		final char O = 'O';
 		final char X = 'X';
-		
+
 		alimentarTabuleiro(i, j, tabuleiro);
-		
+
 		while (jogada <= 9) {
-			
+
 			System.out.print("JOGO DA VELHA\n");
 			mostrarTabuleiro(i, tabuleiro);
 
@@ -121,7 +122,7 @@ public class JogoDaVelhaModularizado {
 			}
 
 		}
-		jogarNovamente();	
-		
+		jogarNovamente();
+
 	}
 }
