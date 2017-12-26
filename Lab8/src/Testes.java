@@ -5,9 +5,9 @@ import org.junit.Test;
 
 public class Testes {
 
-	Produto p = null;
-
-	@Test
+	Produto p = null; 
+ 
+	@Test 
 	public void teste() {
 		try {
 			p = new Produto(null, 1);
